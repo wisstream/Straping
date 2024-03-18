@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "competitions",
+  "info": {
+    "singularName": "competition",
+    "pluralName": "competitions",
+    "displayName": "Compétitions"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ChampionsLeague": {
+      "type": "string",
+      "required": false
+    },
+    "players": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::player.player",
+      "mappedBy": "competitions"
+    }
+  }
+}
