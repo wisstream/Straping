@@ -794,12 +794,13 @@ export interface ApiCompetitionCompetition extends Schema.CollectionType {
     singularName: 'competition';
     pluralName: 'competitions';
     displayName: 'Comp\u00E9titions';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    ChampionsLeague: Attribute.String;
+    Roland_Garros: Attribute.String;
     players: Attribute.Relation<
       'api::competition.competition',
       'manyToMany',
